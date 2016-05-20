@@ -2,16 +2,24 @@ input {
     margin-bottom: 5px;
 }
 
-body {
-    padding-top : 60px;
-    padding-left: 20px;
-    padding-right: 20px;
+
+.btn {
+    border-radius: 18px;
 }
 
-p.navbar-text.pull-left {
-    margin-right: 15px;
+body {
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 p.navbar-text.pull-right {
+    margin-right: 15px;
+}
+
+p.navbar-text.pull-left {
     margin-left: 15px;
+}
+
+.blue {
+    color: #0066FF;
 }
