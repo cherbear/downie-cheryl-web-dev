@@ -14,8 +14,9 @@
 
         var api = {
             createUser: createUser,
-            findUserByUsernameAndPassword: findUserByUsernameAndPassword,
             findUserById: findUserById,
+            findUserByUsername: findUserByUsername,
+            findUserByCredentials: findUserByCredentials,
             updateUser: updateUser,
             deleteUser: deleteUser
         };
@@ -33,7 +34,7 @@
         }
         function createUser(user) {}
         function deleteUser(id) {}
-        function findUserByUsernameAndPassword(username, password) {
+        function findUserByCredentials(username, password) {
             for(var i in users) {
                 if(users[i].username === username && users[i].password === password) {
                     return users[i];
@@ -44,6 +45,14 @@
         function findUserById(id) {
             for(var i in users) {
                 if(users[i]._id === id) {
+                    return users[i];
+                }
+            }
+            return null;
+        }
+        function findUserByUsername(username) {
+            for(var i in users) {
+                if(users[i].username === username) {
                     return users[i];
                 }
             }
