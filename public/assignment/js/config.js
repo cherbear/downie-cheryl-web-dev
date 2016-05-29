@@ -5,7 +5,7 @@
 
     function Config($routeProvider) {
         $routeProvider
-            .when("/login", {
+            .when("/login", "/", {  //Might not be allowed to have multiple things here
                 templateUrl: "views/user/login.view.client.html",
                 controller: "LoginController",
                 controllerAs: "model"
