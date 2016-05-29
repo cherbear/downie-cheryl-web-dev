@@ -1,73 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Website Page "Website-List"</title>
-    <!-- Bootstrap -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/assignment2-style-sheet.css" rel="stylesheet">
-
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="viewport" content="initial-scale=1.25, user-scalable = no">
-</head>
-<body>
-
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="">
+            <a class="navbar-brand" href="#/website-new">
                 Websites
             </a>
             <p class="navbar-text pull-right">
-                <a href="website-new.view.client.html" class="navbar-link">
-              <span class="glyphicon glyphicon-plus">
-              </span>
+                <a href="#/profile=" class="navbar-link">
+                  <span class="glyphicon glyphicon-plus">
+                  </span>
                 </a>
             </p>
         </div>
     </div>
 </nav>
 
-<ul class="list-group">
-    <li class="list-group-item">
-        <a href="../views/page/page-list.view.client.html">Blogger</a>
-        <a class="pull-right"><span class="glyphicon glyphicon-play"></span></a>
-        <a class="pull-right" href="website-edit.view.client.html">
-            <span class="glyphicon glyphicon-cog"></span></a>
+<div class="container">
+    <ul class="list-group">
+        <li ng-repeat="website in model.websites" class="list-group-item">
+            <a href="#/page-list">{{website.name}}</a>
+            <a href="#/user/{{website.developerId}}/website/{{website._id}}" class="pull-right">
+                <span class="glyphicon glyphicon-cog"></span>
+                <span class="glyphicon glyphicon-play"></span>
+            </a>
         </li>
-    <li class="list-group-item">
-        <a href="../views/page/page-list.view.client.html">Address Book</a>
-        <a class="pull-right"><span class="glyphicon glyphicon-play"></span></a>
-        <a class="pull-right" href="website-edit.view.client.html">
-            <span class="glyphicon glyphicon-cog"></span></a>
-        </li>
-    <li class="list-group-item">
-        <a href="../views/page/page-list.view.client.html">Script Tester</a>
-        <a class="pull-right"><span class="glyphicon glyphicon-play"></span></a>
-        <a class="pull-right" href="website-edit.view.client.html">
-            <span class="glyphicon glyphicon-cog"></span></a>
-        </li>
-    <li class="list-group-item">
-        <a href="../views/page/page-list.view.client.html">Pretty Website</a>
-        <a class="pull-right"><span class="glyphicon glyphicon-play"></span></a>
-        <a class="pull-right" href="website-edit.view.client.html">
-            <span class="glyphicon glyphicon-cog"></span></a>
-        </li>
-</ul>
-
-
-<nav class="navbar navbar-default navbar-fixed-bottom">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <p class="navbar-text pull-right">
-                <a href="../views/user/profile.view.client.html" class="navbar-link">
-              <span class="glyphicon glyphicon-user blue">
-              </span>
-                </a>
-            </p>
-        </div>
-    </div>
-</nav>
-</body>
-</html>
+    </ul>
+</div>
