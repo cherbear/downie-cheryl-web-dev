@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Website Page "Website-Edit"</title>
+    <title>Page Page "Page-Edit"</title>
 
     <!-- Bootstrap -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
@@ -11,6 +11,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="viewport" content="initial-scale=1.25, user-scalable = no">
+
 </head>
 <body>
 
@@ -18,16 +19,16 @@
     <div class="container-fluid">
         <div class="navbar-header">
             <p class="navbar-text pull-left">
-            <a href="website-list.html" class="navbar-link">
+                <a href="page-list.view.client.html" class="navbar-link">
               <span class="glyphicon glyphicon-chevron-left">
               </span>
-            </a>
+                </a>
             </p>
             <a class="navbar-brand" href="">
-                Edit Website
+                Edit Page
             </a>
             <p class="navbar-text pull-right">
-                <a href="website-list.html" class="navbar-link">
+                <a href="page-edit.view.client.html" class="navbar-link">
               <span class="glyphicon glyphicon-ok">
               </span>
                 </a>
@@ -40,27 +41,31 @@
 <div class="container">
     <form>
         <div class="form-group">
-            <label for="webName">Website Name</label>
+            <label for="pageName">Name</label>
             <input type="text"
                    class="form-control"
-                   id="webName"
-                   placeholder="My Blog"/>
+                   id="pageName"
+                   placeholder="About"/>
         </div>
-        <div class="form-group">
-            <label for="description">Description</label>
-            <textarea rows="5" id="description" class="form-control" placeholder="A daily blog about me and my crazy life"></textarea>
-        </div>
-    </form>
 
-    <a class="btn btn-danger btn-block"
-       href="website-list.html">Delete</a>
+        <div class="form-group">
+            <label for="pageTitle">Title</label>
+            <input type="text"
+                   class="form-control"
+                   id="pageTitle"
+                   placeholder="Page Title"/>
+        </div>
+
+        <a class="btn btn-danger btn-block"
+           href="page-list.view.client.html">Delete</a>
+    </form>
 </div>
 
 <nav class="navbar navbar-default navbar-fixed-bottom">
     <div class="container-fluid">
         <div class="navbar-header">
             <p class="navbar-text pull-right">
-                <a href="../user_management/profile.html" class="navbar-link">
+                <a href="../user/profile.view.client.html" class="navbar-link">
               <span class="glyphicon glyphicon-user blue">
               </span>
                 </a>

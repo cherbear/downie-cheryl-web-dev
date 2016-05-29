@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Widget Page "Widget-Choose"</title>
+    <title>Website Page "Website-New"</title>
     <!-- Bootstrap -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/assignment2-style-sheet.css" rel="stylesheet">
@@ -17,33 +17,46 @@
     <div class="container-fluid">
         <div class="navbar-header">
             <p class="navbar-text pull-left">
-                <a href="widget-list.html" class="navbar-link">
+                <a href="website-list.view.client.html" class="navbar-link">
               <span class="glyphicon glyphicon-chevron-left">
               </span>
                 </a>
             </p>
             <a class="navbar-brand" href="">
-                Choose Widget
+                New Website
             </a>
+            <p class="navbar-text pull-right">
+                <a href="website-new.view.client.html" class="navbar-link">
+              <span class="glyphicon glyphicon-ok">
+              </span>
+                </a>
+            </p>
         </div>
     </div>
 </nav>
 
+<div class="container">
+    <form>
+        <div class="form-group">
+            <label for="webName">Name</label>
+            <input type="text"
+                   class="form-control"
+                   id="webName"
+                   placeholder="My Blog"/>
+        </div>
 
-<ul class="list-group">
-    <li class="list-group-item">
-        <a href="widget-header.html">Header</a></li>
-    <li class="list-group-item">
-        <a href="widget-image.html">Image</a></li>
-    <li class="list-group-item">
-        <a href="widget-youtube.html">YouTube</a></li>
-</ul>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea rows="5" id="description" class="form-control" placeholder="A daily blog about me and my crazy life"></textarea>
+        </div>
+    </form>
+</div>
 
 <nav class="navbar navbar-default navbar-fixed-bottom">
     <div class="container-fluid">
         <div class="navbar-header">
             <p class="navbar-text pull-right">
-                <a href="../user_management/profile.html" class="navbar-link">
+                <a href="../views/user/profile.view.client.html" class="navbar-link">
               <span class="glyphicon glyphicon-user blue">
               </span>
                 </a>
