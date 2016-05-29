@@ -9,8 +9,8 @@
     <input class="form-control"
            placeholder="verify password"
            type="password">
-    <a class="btn btn-primary btn-block"
-       href="#/profile">Register</a>
+    <a ng-click="model.register(username, password, verifyPassword)"
+       class="btn btn-primary btn-block">Register</a>
     <a class="btn btn-danger btn-block"
        href="#/login">Cancel</a>
 </div>
