@@ -20,25 +20,10 @@
         };
         return api;
 
-        function updatePage(pageId, page) {
-            for(var i in pages) {
-                if(pages[i]._id === id) {
-                    pages[i].name = newPage.name;
-                    return true;
-                }
-            }
-            return false;
+        function createPage(websiteId, page) {
+            // different from user service
         }
-        function createPage(websiteId, page) {}
-        function deletePage(pageId) {}
-        function findPageById(pageId) {
-            for(var i in pages) {
-                if(pages[i]._id === id) {
-                    return pages[i];
-                }
-            }
-            return null;
-        }
+
         function findPageByWebsiteId(websiteId) {
             for(var i in pages) {
                 if(pages[i].websiteId === websiteId) {
@@ -47,6 +32,35 @@
             }
             return null;
         }
+
+        function findPageById(pageId) {
+            for(var i in pages) {
+                if(pages[i]._id === pageId) {
+                    return pages[i];
+                }
+            }
+            return null;
+        }
+
+        function updatePage(pageId, page) {
+            for(var i in pages) {
+                if(pages[i]._id === pageId) {
+                    pages[i].name = page.name;
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        function deletePage(pageId) {
+            for(var i = pages.length - 1; i >= 0; i--) {
+                if(pages[i]._id === pageId) {
+                    pages.splice(i, 1);
+                }
+            }
+        }
+
+
 
     }
 })();
