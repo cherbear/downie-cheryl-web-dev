@@ -20,6 +20,7 @@
             updateUser: updateUser,
             deleteUser: deleteUser
         };
+        
         return api;
 
         function updateUser(id, newUser) {

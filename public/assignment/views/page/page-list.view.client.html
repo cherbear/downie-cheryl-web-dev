@@ -1,24 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Page Page "Page-List"</title>
-    <!-- Bootstrap -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../css/assignment2-style-sheet.css" rel="stylesheet">
-
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="viewport" content="initial-scale=1.25, user-scalable = no">
-
-</head>
-<body>
-
 <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
         <div class="navbar-header">
             <p class="navbar-text pull-left">
-                <a href="../website/website-list.view.client.html" class="navbar-link">
+                <a href="#/user/{{model.user._id}}/website/" class="navbar-link">
               <span class="glyphicon glyphicon-chevron-left">
               </span>
                 </a>
@@ -27,7 +11,7 @@
                 Pages
             </a>
             <p class="navbar-text pull-right">
-                <a href="page-new.view.client.html" class="navbar-link">
+                <a href="#/user/{{model.user._id}}/website/{{model.website._id}}/page/new" class="navbar-link">
               <span class="glyphicon glyphicon-plus">
               </span>
                 </a>
@@ -50,7 +34,7 @@
     <div class="container-fluid">
         <div class="navbar-header">
             <p class="navbar-text pull-right">
-                <a href="../user/profile.view.client.html" class="navbar-link">
+                <a href="#/user/{{model.user._id}}" class="navbar-link">
               <span class="glyphicon glyphicon-user blue">
               </span>
                 </a>
@@ -58,6 +42,3 @@
         </div>
     </div>
 </nav>
-
-</body>
-</html>
