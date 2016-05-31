@@ -34,7 +34,8 @@
     <form>
         <div class="form-group">
             <label for="pageName">Name</label>
-            <input type="text"
+            <input ng-model="model.page.name"
+                   type="text"
                    class="form-control"
                    id="pageName"
                    placeholder="About"/>
@@ -42,14 +43,15 @@
 
         <div class="form-group">
             <label for="pageTitle">Title</label>
-            <input type="text"
+            <input ng-model="model.page.title"
+                   type="text"
                    class="form-control"
                    id="pageTitle"
                    placeholder="Page Title"/>
         </div>
 
         <a class="btn btn-danger btn-block"
-           href="page-list.view.client.html">Delete</a>
+           ng-click="model.deletePage()">Delete</a>
     </form>
 </div>
 
