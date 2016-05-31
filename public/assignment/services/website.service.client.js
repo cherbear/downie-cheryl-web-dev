@@ -1,6 +1,6 @@
 (function(){
     angular.module("WebAppMaker")
-        .factory("WebsiteService", WebsiteService);
+           .factory("WebsiteService", WebsiteService);
 
     var websites = [
         { "_id": "123", "name": "Facebook",    "developerId": "456" },
@@ -14,10 +14,28 @@
     function WebsiteService() {
 
         var api = {
-            findWebsitesForUser: findWebsitesForUser,
-            findWebsiteById: findWebsiteById
+            createWebsite: createWebsite,
+            findWebsitesByUser: findWebsitesByUser,
+            findWebsiteById: findWebsiteById,
+            updateWebsite: updateWebsite,
+            deleteWebsite: deleteWebsite
         };
         return api;
+
+
+        function createWebsite(userId, website) {
+            // different from user service
+        }
+
+        function findWebsitesByUser(userId) {
+            var result = [];
+            for(var i in websites) {
+                if(websites[i].developerId === userId) {
+                    result.push(websites[i]);
+                }
+            }
+            return result;
+        }
 
         function findWebsiteById(websiteId) {
             for(var i in websites) {
@@ -28,14 +46,24 @@
             return null;
         }
 
-        function findWebsitesForUser(userId) {
-            var result = [];
+        function updateWebsite(websiteId, website) {
             for(var i in websites) {
-                if(websites[i].developerId === userId) {
-                    result.push(websites[i]);
+                if(websites[i]._id === websiteId) {
+                    websites[i].name = website.name;
+                    websites[i].developerId = website.developerId;
+                    return true;
                 }
             }
-            return result;
+            return false;
         }
+
+        function deleteWebsite(websiteId) {
+            for(var i = users.length - 1; i >= 0; i--) {
+                if(websites[i]._id === websiteId) {
+                    websites.splice(i, 1);
+                }
+            }
+        }
+
     }
 })();
