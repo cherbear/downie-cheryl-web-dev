@@ -20,15 +20,16 @@
     </div>
 </nav>
 
-<ul class="list-group">
-    <li class="list-group-item">
-        <a href="../widget/widget-list.view.client.html">Home</a>
-        <a class="pull-right" href="page-edit.view.client.html"><span class="glyphicon glyphicon-cog"></span></a></li>
-    <li class="list-group-item"><a href="../widget/widget-list.view.client.html">About</a>
-        <a class="pull-right" href="page-edit.view.client.html"><span class="glyphicon glyphicon-cog"></span></a></li>
-    <li class="list-group-item"><a href="../widget/widget-list.view.client.html">Blogs</a>
-        <a class="pull-right" href="page-edit.view.client.html"><span class="glyphicon glyphicon-cog"></span></a></li>
-</ul>
+<div class="container">
+    <ul class="list-group">
+        <li ng-repeat="page in model.pages" class="list-group-item">
+            <a href="#/user/{{model.user._id}}/website/{{model.website._id}}/page/{{model.page._id}}">{{page.name}}</a>
+            <a href="#/user/{{model.user._id}}/website/{{website._id}}/page/{{model.page._id}}" class="pull-right">
+                <span class="glyphicon glyphicon-cog"></span>
+            </a>
+        </li>
+    </ul>
+</div>
 
 <nav class="navbar navbar-default navbar-fixed-bottom">
     <div class="container-fluid">
