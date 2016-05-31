@@ -16,11 +16,8 @@
         init();
 
 
-        vm.updatePage = updatePage;
-
-        function updatePage (pageId, page) {
-            var page = PageService.updatePage(pageId, page);
-            $location.url("/user/:uid/website/:wid/page/:pid");
+        function create() {
+            vm.page = PageService.createPage(vm.websiteId, vm.page);
         }
     }
 })();

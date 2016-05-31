@@ -13,11 +13,8 @@
         }
         init();
 
-        vm.deletePage = deletePage;
-
-        function deleteWebsite () {
-            var website = WebsiteService.deleteWebsite(vm.websiteId);
-            $location.url("/user/:uid/website/");
+        function create() {
+            vm.website = WebsiteService.createWebsite(vm.userId, website);
         }
     }
 })();

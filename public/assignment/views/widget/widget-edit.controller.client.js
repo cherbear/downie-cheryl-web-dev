@@ -13,12 +13,12 @@
         }
         init();
 
-        function updateWebsite(website) {
-            WidgetService.updateWidget(vm.websiteId, website);
+        function updateWidget(widget) {
+            WidgetService.updateWidget(vm.widgetId, widget);
         }
 
-        function deleteWebsite () {
-            WidgetService.deleteWidget(vm.websiteId);
+        function deleteWidget() {
+            WidgetService.deleteWidget(vm.widgetId);
             $location.url("/user/:uid/website/");
         }
     }
