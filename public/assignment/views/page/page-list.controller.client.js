@@ -1,3 +1,10 @@
-/**
- * Created by a on 5/29/2016.
- */
+(function(){
+    angular
+        .module("WebAppMaker")
+        .controller("PageListController", PageListController);
+
+    function PageListController($location, PageService) {
+
+        var vm = this;
+    }
+})();
