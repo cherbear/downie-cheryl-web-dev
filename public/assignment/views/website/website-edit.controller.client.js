@@ -13,10 +13,12 @@
         }
         init();
 
-        vm.deletePage = deletePage;
+        function updateWebsite(website) {
+            WebsiteService.updateWebsite(vm.websiteId, website);
+        }
 
         function deleteWebsite () {
-            var website = WebsiteService.deleteWebsite(vm.websiteId);
+            WebsiteService.deleteWebsite(vm.websiteId);
             $location.url("/user/:uid/website/");
         }
     }
