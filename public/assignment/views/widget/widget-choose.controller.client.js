@@ -13,7 +13,7 @@
         }
         init();
 
-        function create() {
+        function create(widgetType) {
             vm.widget = WidgetService.createWidget(vm.pageId, vm.widget);
         }
     }

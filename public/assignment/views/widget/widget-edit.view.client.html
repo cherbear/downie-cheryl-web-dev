@@ -25,17 +25,16 @@
 
     {{model.widget}}
 
-    <div ng-repeat="widget in widgets">
+    <div ng-switch="widget.widgetType">
         <div ng-switch-when="HEADING">
             <ng-include src="'widget-heading.view.client.html'"></ng-include>
         </div>
         <div ng-switch-when="IMAGE">
-            <ng-include src="'widget-image.view.client.html'"></ng-include>
+            <ng-include src="'image.view.client.html'"></ng-include>
         </div>
         <div ng-switch-when="YOUTUBE">
             <ng-include src="'widget-youtube.view.client.html'"></ng-include>
         </div>
-    </div>
     </div>
 
     <a class="btn btn-danger btn-block"
