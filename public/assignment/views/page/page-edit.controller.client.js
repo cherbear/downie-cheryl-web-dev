@@ -15,11 +15,12 @@
             }
             init();
 
-        vm.deletePage = deletePage;
+        function updatePage(page) {
+            PageService.updatePage(vm.pageId, vm.name, vm.websiteId);
+        }
 
         function deletePage (pageId) {
-            var page = PageService.deletePage(pageId);
-            $location.url("/user/:uid/website/:wid/page");
+            PageService.deletePage(vm.pageId);
         }
     }
 })();
