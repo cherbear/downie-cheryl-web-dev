@@ -13,7 +13,7 @@ require ("./test/app.js")(app);
 var ipaddress = process.env.OPENSHIFT_NODEJS_IP;
 var port      = process.env.OPENSHIFT_NODEJS_PORT || 3000;
 
-// app.listen(port, ipaddress); this stuff might not be necessary
+app.listen(port, ipaddress);
 
 
 var assignment = require('./assignment/app.js');
