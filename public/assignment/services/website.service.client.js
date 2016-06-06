@@ -4,7 +4,7 @@
 
 
 
-    function WebsiteService() {
+    function WebsiteService($http) {
 
         var api = {
             createWebsite: createWebsite,
