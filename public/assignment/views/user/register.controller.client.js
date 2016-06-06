@@ -9,15 +9,19 @@
 
         vm.register = register;
 
-        function register (username, password, verifyPassword) {
-            if (username === UserService.findUserByUsername(username)) {
-                vm.error = "Username already taken";
-            } else if (password != verifyPassword) {
-                vm.error = "Passwords did not match";
-            } else {
-                UserService.createUser(username);
-                $location.url("/user/" + id);
-            }
+        function register (username, password, password2) {
+
+            UserService
+                .createUser(username, password)
+                .then(
+                    function(response){
+                        var user = response.data;
+                        $location.url("/user/"+user._id);
+                    },
+                    function(error){
+                        vm.error = error.data;
+                    }
+                );
         }
     }
 })();
