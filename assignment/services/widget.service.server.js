@@ -1,5 +1,5 @@
 module.exports = function (app) {
-    var multer = require('multer'); // npm install multer --save
+    var multer = require('multer');
     var upload = multer({ dest: __dirname+'/../../public/uploads' });
 
     var widgets = [
@@ -53,6 +53,6 @@ module.exports = function (app) {
             }
         }
 
-        res.redirect("/assignment/#/user/:uid/website/:wid/page/:pid/widget/345");
+        res.redirect("/assignment/#/user/:uid/website/:wid/page/:pid/widget/:wgid");
     }
 }
