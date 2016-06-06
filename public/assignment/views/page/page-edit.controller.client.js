@@ -10,8 +10,14 @@
         vm.name = $routeParams.name;
         vm.websiteId = $routeParams.websiteId;
 
+        var id = $routeParams["id"];
+
             function init() {
-                vm.page = PageService.findPageById(vm.pageId);
+                PageService
+                    .findPageById(id)
+                    .then(function(response) {
+                        vm.page = response.data;
+                    });
             }
             init();
 
