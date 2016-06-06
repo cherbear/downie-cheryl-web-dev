@@ -15,6 +15,11 @@
                 controller: "LoginController",
                 controllerAs: "model"
             })
+            .when("/flickr", {
+                templateUrl: "views/widget/widget-flickr-search.view.client.html",
+                controller: "FlickrImageSearchController",
+                controllerAs: "model"
+            })
             .when("/register", {
                 templateUrl: "views/user/register.view.client.html",
                 controller: "RegisterController",
@@ -69,6 +74,9 @@
                 templateUrl: "views/widget/widget-edit.view.client.html",
                 controller: "EditWidgetController",
                 controllerAs: "model"
+            })
+            .otherwise({
+                redirectTo: "/login"
             });
     }
 })();
