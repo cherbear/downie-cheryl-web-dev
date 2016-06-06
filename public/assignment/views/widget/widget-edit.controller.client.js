@@ -1,25 +1,22 @@
 (function(){
     angular
         .module("WebAppMaker")
-        .controller("EditWidgetController", EditWidgetController);
+        .controller("WidgetEditController", WidgetEditController);
 
-    function EditWidgetController($routeParams, WidgetService) {
+    function WidgetEditController($routeParams, WidgetService) {
         var vm = this;
-        vm.widgetId = $routeParams.widgetId;
-        vm.widgetType = $routeParams.widgetType;
+        var widgetId = $routeParams.widgetId;
 
         function init() {
-            vm.widget = WidgetService.findWidgetById(vm.widgetId);
+            console.log(widgetId);
+            WidgetService
+                .findWidgetById(widgetId)
+                .then(
+                    function(response) {
+                        vm.widget = response.data;
+                    }
+                );
         }
         init();
-
-        function updateWidget(widget) {
-            WidgetService.updateWidget(vm.widgetId, widget);
-        }
-
-        function deleteWidget() {
-            WidgetService.deleteWidget(vm.widgetId);
-            $location.url("/user/:uid/website/");
-        }
     }
 })();
