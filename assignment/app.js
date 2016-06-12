@@ -2,10 +2,10 @@ module.exports = function(app) {
 
     var models = require("./models/models.js")();
 
-    var userService = require("./services/user.services.server.js")(app, models);
-    var websiteService = require("./services/website.service.server")(app, models);
+    var userService = require("./services/user.service.server.js")(app, models);
+    var websiteService = require("./services/website.service.server.js")(app, models);
     var widgetService = require("./services/widget.service.server.js")(app, models);
-    var todoService = require("./services/todo.service.server")(app);
+    var todoService = require("./services/todo.service.server.js")(app);
 
     var users = [
         {_id: "123", username: "alice",    password: "alice",    firstName: "Alice",  lastName: "Wonder"  },
