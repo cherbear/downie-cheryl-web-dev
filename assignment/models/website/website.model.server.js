@@ -7,7 +7,10 @@ module.exports = function() {
 
     var api = {
         createWebsite: createWebsite,
-        findAllWebsitesForUser: findAllWebsitesForUser
+        findAllWebsitesForUser: findAllWebsitesForUser,
+        findWebsiteById: findWebsiteById,
+        updateWebsite: updateWebsite,
+        deleteWebsite: deleteWebsite
     };
     return api;
 
@@ -20,4 +23,23 @@ module.exports = function() {
         return Website.find({_user: userId});
     }
 
+    function findWebsiteById(websiteId) {
+        return Website.findById(websiteId);
+    }
+
+    function updateWebsite(websiteId, newWebsite) {
+        return Website.update(
+            {_id: websiteId},
+            {$set :
+            {
+                name: newWebsite.name,
+                description: newWebsite.description
+            }
+            }
+        );
+    }
+
+    function deleteWebsite(websiteId) {
+        return Website.remove({_id: websiteId});
+    }
 };
