@@ -123,7 +123,7 @@ module.exports = function(app, models) {
     }
 
 
-    function getUsers(req, res) {               // Needs completing
+    function getUsers(req, res) {
         var username = req.query["username"];
         var password = req.query["password"];
         if(username && password) {
