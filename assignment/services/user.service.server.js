@@ -2,27 +2,13 @@ module.exports = function(app, models) {
 
     var userModel = models.userModel;
 
-    var users = [
-        {_id: "123", username: "alice",    password: "alice",    firstName: "Alice",  lastName: "Wonder"  },
-        {_id: "234", username: "bob",      password: "bob",      firstName: "Bob",    lastName: "Marley"  },
-        {_id: "345", username: "charly",   password: "charly",   firstName: "Charly", lastName: "Garcia"  },
-        {_id: "456", username: "jannunzi", password: "jannunzi", firstName: "Jose",   lastName: "Annunzi" }
-    ];
 
     app.post("/api/user", createUser);
     app.get("/api/user", getUsers);
     app.get("/api/user/:userId", findUserById);
     app.put("/api/user/:userId", updateUser);
     app.delete("/api/user/:userId", deleteUser);
-    app.get("/allusers/:username", function(req, res){
-        var username = req.params['username'];
-        for(var i in users) {
-            if(users[i].username === username) {
-                res.send(users[i]);
-            }
-        }
-//        res.send(users);
-    });
+
 
     function createUser(req, res) {
         var newUser = req.body;
