@@ -37,7 +37,10 @@ module.exports = function() {
             {_id: pageId},
             {$set :
             {
-                name: newPage.name
+                name: newPage.name,
+                title: newPage.title,
+                description: newPage.description,
+                widgets: newPage.widgets
             }
             }
         );

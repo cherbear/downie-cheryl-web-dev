@@ -33,7 +33,8 @@ module.exports = function() {
             {$set :
             {
                 name: newWebsite.name,
-                description: newWebsite.description
+                description: newWebsite.description,
+                pages: newWebsite.pages
             }
             }
         );

@@ -11,7 +11,7 @@ module.exports = function() {
         findWidgetById: findWidgetById,
         updateWidget: updateWidget,
         deleteWidget: deleteWidget,
-        uploadImage: uploadImage
+        reorderWidget: reorderWidget
     };
     return api;
 
@@ -33,8 +33,19 @@ module.exports = function() {
             {_id: widgetId},
             {$set :
             {
+                type : newWidget.type,
                 name: newWidget.name,
-                widgetType: newWidget.widgetType
+                text: newWidget.text,
+                description: newWidget.description,
+                url: newWidget.url,
+                width: newWidget.width,
+                height: newWidget.height,
+                rows: newWidget.rows,
+                size: newWidget.size,
+                class: newWidget.class,
+                icon: newWidget.icon,
+                deletable: newWidget.deletable,
+                formatted: newWidget.formatted,
             }
             }
         );
@@ -44,7 +55,7 @@ module.exports = function() {
         return Widget.remove({_id: widgetId});
     }
 
-    function uploadImage(file) {
-        
+    function reorderWidget(pageId, start, end) {
+        //Modifies the order of widget at position start into final position end in page whose _id is pageId
     }
 };
