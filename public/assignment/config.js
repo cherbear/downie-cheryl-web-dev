@@ -20,6 +20,16 @@
                 controller: "FlickrImageSearchController",
                 controllerAs: "model"
             })
+            .when("/user/:uid/website/:wid/page/:pid/widget/:wgid/flickr", {
+                templateUrl: "views/widget/widget-flickr-search.view.client.html",
+                controller: "FlickrImageSearchController",
+                controllerAs: "model"
+            })
+            .when("/user/:uid/website/:wid/page/:pid/widget/new/flickr_search", {
+                templateUrl: "views/widget/widget-flickr-search-new.view.client.html",
+                controller: "NewFlickrImageController",
+                controllerAs: "model"
+            })
             .when("/register", {
                 templateUrl: "views/user/register.view.client.html",
                 controller: "RegisterController",
@@ -68,6 +78,11 @@
             .when("/user/:uid/website/:wid/page/:pid/widget/new", {
                 templateUrl: "views/widget/widget-choose.view.client.html",
                 controller: "WidgetChooseController",
+                controllerAs: "model"
+            })
+            .when("/user/:uid/website/:wid/page/:pid/widget/new/:type", {
+                templateUrl: "views/widget/widget-new.view.client.html",
+                controller: "NewWidgetController",
                 controllerAs: "model"
             })
             .when("/user/:uid/website/:wid/page/:pid/widget/:wgid", {
