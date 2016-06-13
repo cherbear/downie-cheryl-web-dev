@@ -1,7 +1,6 @@
 module.exports = function() {
 
     var mongoose = require('mongoose');
-    mongoose.connect('mongodb://localhost/webdev');
 
     var connectionString = 'mongodb://127.0.0.1:27017/webdev';
 
@@ -15,6 +14,7 @@ module.exports = function() {
 
     var mongoose = require("mongoose");
     mongoose.connect(connectionString);
+    
 
     var userModel = require("./user/user.model.server.js")();
     var websiteModel = require("./website/website.model.server.js")();
