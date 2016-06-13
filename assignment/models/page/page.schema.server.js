@@ -7,7 +7,7 @@ module.exports = function() {
         name : String,
         title: String,
         description: String,
-        widgets: [],
+        widgets: [{type: mongoose.Schema.Types.ObjectId, ref: 'Widget'}],
         dateCreated : {type : Date, default: Date.now}
     }, {collection: "assignment.page"});
 
