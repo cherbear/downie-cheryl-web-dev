@@ -50,6 +50,10 @@
                    placeholder="Page Title"/>
         </div>
 
+        <span ng-show="pageName.$invalid">
+                    Required field
+                </span>
+
         <a class="btn btn-danger btn-block"
            ng-click="model.deletePage(model._id)">Delete</a>
     </form>

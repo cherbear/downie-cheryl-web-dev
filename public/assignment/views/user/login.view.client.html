@@ -5,12 +5,17 @@
     </div>
 
     <h2>Login</h2>
+    <form name="myForm" novalidate>
     <input ng-model="username" class="form-control"
            placeholder="username"
            type="text"/>
     <input ng-model="password" class="form-control"
            placeholder="password"
            type="password">
+
+        <span ng-show="myForm.$submitted && username.$invalid || password.$invalid">
+                    Required field
+                </span>
     <a ng-click="model.login(username, password)"
        class="btn btn-primary btn-block">Login</a>
     <a class="btn btn-success btn-block"
@@ -19,4 +24,5 @@
         <span class="fa fa-facebook"></span>
         Facebook
     </a>
+    </form>
 </div>

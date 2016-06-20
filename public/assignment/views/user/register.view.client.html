@@ -10,7 +10,10 @@
         <input name="username" ng-model="username" class="form-control" placeholder="yourUsername" type="text"/>
         <input name="password" type="password" ng-model="password" class="form-control"/>
         <input name="password2" type="password" ng-model="password" class="form-control"/>
-                <span ng-show="myForm.$submitted && password != password2">
+        <span ng-show="myForm.$submitted && username.$invalid || password.$invalid || password2.$invalid">
+                    Required field
+                </span>
+        <span ng-show="myForm.$submitted && password != password2">
                     Passwords don't match
                 </span>
         <a ng-click="model.register(username, password, password2)"
