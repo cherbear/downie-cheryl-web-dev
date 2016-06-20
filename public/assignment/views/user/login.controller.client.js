@@ -3,7 +3,7 @@
         .module("WebAppMaker")
         .controller("LoginController", LoginController);
 
-    function LoginController($location, UserService) {
+    function LoginController($location, $rootScope, UserService) {
 
         var vm = this;
 
@@ -11,12 +11,13 @@
 
         function login (username, password) {
             UserService
-                .findUserByUsernameAndPassword(username, password)
+                .login(username, password)
                 .then(
                     function(response) {
                         console.log(response);
                         var user = response.data;
                         if(user) {
+                            $rootScope.currentUser = user;
                             var id = user._id;
                             $location.url("/user/" + id);
                         }
