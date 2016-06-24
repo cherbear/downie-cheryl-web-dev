@@ -19,7 +19,7 @@
         init();
 
         function updateWidget(widget) {
-            var result = WidgetService.updateWidget(vm.widgetId, widget);;
+            var result = WidgetService.updateWidget(vm.widgetId, widget);
             if(result === true) {
                 vm.success = "Widget successfully updated";
             } else {

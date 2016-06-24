@@ -27,6 +27,7 @@
         function createUser(user) {
             for(var i in users) {
                 if(users[i].username === user.username) {
+                    console.log("in create user on user service inside the if")
                     return false;
                 }
                 users.push(user);
