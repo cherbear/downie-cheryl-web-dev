@@ -15,7 +15,7 @@
         init();
 
         function updateWebsite() {
-            var result = WebsiteService.updateWebsite(vm.website._id, vm.website);
+            var result = WebsiteService.updateWebsite(vm.websiteId, vm.website);
             if(result === true) {
                 vm.success = "Website successfully updated";
             } else {

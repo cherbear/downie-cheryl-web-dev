@@ -26,6 +26,7 @@
 
         function deletePage (pageId) {
             PageService.deletePage(pageId);
+            $location.url("/user/" + vm.userId + "/website/" + vm.websiteId);
         }
     }
 })();
