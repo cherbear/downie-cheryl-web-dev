@@ -24,7 +24,7 @@
 
 
         function createWebsite(userId, website) {
-            newWebsite = {"_id": new Date().getMilliseconds(), "name": website, "developerId": userId};
+            newWebsite = {"_id": (new Date).getTime(), "name": website, "developerId": userId};
             websites.push(newWebsite);
         }
 

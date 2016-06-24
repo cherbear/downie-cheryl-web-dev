@@ -11,7 +11,7 @@
         vm.pageId = $routeParams.pid;
 
         function init() {
-            vm.widget = WidgetService.findWidgetById(vm.widgetId);
+            vm.widget = angular.copy(WidgetService.findWidgetById(vm.widgetId));
         }
         init();
 
@@ -21,7 +21,7 @@
 
         function deleteWidget() {
             WidgetService.deleteWidget(vm.widgetId);
-            $location.url("/user/:uid/website/");
+            $location.url("/user/"+ vm.userId +"/website/");
         }
     }
 })();

@@ -27,8 +27,15 @@
         };
         return api;
 
-        function createWidget(pageId, widget) {
-            // different from user service
+        function createWidget(widget) {
+            console.log(widget);
+            for(var i in widgets) {
+                if(widgets[i]._id === widget._id) {
+                    return false;
+                }
+            }
+            widgets.push(widget);
+            return true;
         }
 
         function findWidgetsByPageId(pageId) {
