@@ -47,7 +47,7 @@
             })
             .when("/user/:uid/website/:wid/page/:pid", {
                 templateUrl: "views/page/page-edit.view.client.html",
-                controller: "EditPageController",
+                controller: "PageEditController",
                 controllerAs: "model"
             })
             .when("/user/:uid/website/:wid/page/:pid/widget", {

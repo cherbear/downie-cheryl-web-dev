@@ -5,8 +5,10 @@
 
     function EditWidgetController($routeParams, WidgetService) {
         var vm = this;
-        vm.widgetId = $routeParams.widgetId;
-        vm.widgetType = $routeParams.widgetType;
+        vm.widgetId = $routeParams.wgid;
+        vm.userId = $routeParams.uid;
+        vm.websiteId = $routeParams.wid;
+        vm.pageId = $routeParams.pid;
 
         function init() {
             vm.widget = WidgetService.findWidgetById(vm.widgetId);
