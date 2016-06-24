@@ -53,8 +53,9 @@
             for(var i in widgets) {
                 if(widgets[i]._id === widgetId) {
                     widgets[i].widgetType = widget.widgetType;
+                    widgets[i].size = widget.size;
+                    widgets[i].width = widget.width;
                     return true;
-                    // not complete since it needs to update the rest of the widget
                 }
             }
             return false;

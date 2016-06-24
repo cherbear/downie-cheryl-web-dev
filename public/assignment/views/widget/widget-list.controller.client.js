@@ -17,6 +17,7 @@
 
         function create(widget) {
             vm.widgets = WidgetService.createWidget(vm.pageId, widget);
+
         }
     }
 })();

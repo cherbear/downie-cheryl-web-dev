@@ -5,16 +5,29 @@
 
     function WidgetChooseController($routeParams, WidgetService) {
         var vm = this;
-        vm.widgetId = $routeParams.widgetId;
-        vm.widgetType = $routeParams.widgetType;
+        vm.widgetId = $routeParams.wgid;
+        vm.userId = $routeParams.uid;
+        vm.websiteId = $routeParams.wid;
+        vm.pageId = $routeParams.pid;
+
+        vm.createWidget = createWidget;
 
         function init() {
-            vm.widget = WidgetService.findWidgetById(vm.widgetId);
+            vm.widgets = WidgetService.findWidgetById(vm.widgetId);
         }
         init();
 
-        function create(widgetType) {
-            vm.widget = WidgetService.createWidget(vm.pageId, vm.widget);
+        function create(widget) {
+            
+            vm.widget = WidgetService.createWidget(vm.pageId, widget);
+        }
+
+        function createWidget(widgetType) {
+            var newWidget = {
+                _id: (new Date()).getTime(),
+                widgetType: widgetType
+            };
+            widgets.push(newWidget);
         }
     }
 })();
