@@ -16,7 +16,7 @@
             } else if (password != verifyPassword) {
                 vm.error = "Passwords did not match";
             } else {
-                newUser = {_id: new Date().getMilliseconds(), username: username, password: password, firstName: "", lastName: ""};
+                newUser = {"_id": new Date().getMilliseconds(), "username": username, "password": password, "firstName": "", "lastName": ""};
                 UserService.createUser(newUser);
                 $location.url("/user/" + newUser._id);
             }

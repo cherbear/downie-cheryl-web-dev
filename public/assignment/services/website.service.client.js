@@ -24,7 +24,8 @@
 
 
         function createWebsite(userId, website) {
-            // different from user service
+            newWebsite = {"_id": new Date().getMilliseconds(), "name": website, "developerId": userId};
+            websites.push(newWebsite);
         }
 
         function findWebsitesByUser(userId) {
