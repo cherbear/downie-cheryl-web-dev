@@ -18,8 +18,8 @@
         }
         init();
 
-        function updatePage(page) {
-            PageService.updatePage(vm.pageId, page);
+        function updatePage() {
+            var result = PageService.updatePage(vm.pageId, vm.page);
             if(result === true) {
                 vm.success = "Page successfully updated";
             } else {

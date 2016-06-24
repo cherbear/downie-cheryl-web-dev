@@ -25,7 +25,13 @@
 
 
         function createUser(user) {
-            users.push(user);
+            for(var i in users) {
+                if(users[i].username === user.username) {
+                    return false;
+                }
+                users.push(user);
+                return true;
+            }
         }
 
         function findUserById(userId) {

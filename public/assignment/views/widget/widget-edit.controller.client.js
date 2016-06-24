@@ -3,7 +3,7 @@
         .module("WebAppMaker")
         .controller("EditWidgetController", EditWidgetController);
 
-    function EditWidgetController($routeParams, WidgetService) {
+    function EditWidgetController($routeParams, $location, WidgetService) {
         var vm = this;
         vm.widgetId = $routeParams.wgid;
         vm.userId = $routeParams.uid;
@@ -14,17 +14,23 @@
         vm.deleteWidget = deleteWidget;
 
         function init() {
-            vm.widget = angular.copy(WidgetService.findWidgetById(vm.widgetId));
+            vm.widget = WidgetService.findWidgetById(vm.widgetId);
         }
         init();
 
         function updateWidget(widget) {
-            WidgetService.updateWidget(vm.widgetId, widget);
+            var result = WidgetService.updateWidget(vm.widgetId, widget);;
+            if(result === true) {
+                vm.success = "Widget successfully updated";
+            } else {
+                vm.error = "Widget not found";
+            }
+
         }
 
         function deleteWidget() {
             WidgetService.deleteWidget(vm.widgetId);
-            $location.url("/user/"+ vm.userId +"/website/");
+            $location.url("/user/"+ vm.userId +"/website/" + vm.websiteId + "/page/" + vm.pageId);
         }
     }
 })();

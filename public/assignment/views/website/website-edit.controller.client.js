@@ -20,7 +20,6 @@
             var result = WebsiteService.updateWebsite(vm.websiteId, vm.website);
             if(result === true) {
                 vm.success = "Website successfully updated";
-                $location.url("/user/" + vm.userId + "/website/");
             } else {
                 vm.error = "Website not found";
             }

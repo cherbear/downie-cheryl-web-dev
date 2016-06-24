@@ -20,8 +20,9 @@
         };
         return api;
 
-        function createPage(websiteId, page) {
-            // different from user service
+        function createPage(page) {
+            pages.push(page);
+            return true;
         }
 
         function findPageByWebsiteId(websiteId) {

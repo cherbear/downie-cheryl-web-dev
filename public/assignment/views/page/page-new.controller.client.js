@@ -18,10 +18,10 @@
         init();
 
 
-        function create(page) {
-            vm.page = PageService.createPage(vm.websiteId, page);
-            console.log(vm.websiteId);
-            $location.url("/user/" + vm.userId + "/website/" + vm.websiteId + "/page");
+        function create(pageName) {
+            vm.page = {"_id": (new Date).getTime(), "name": pageName, "websiteId": vm.websiteId};
+            var result = PageService.createPage(vm.page);
+            $location.url("/user/" + vm.userId + "/website/" + vm.websiteId + "/page/");
         }
     }
 })();
