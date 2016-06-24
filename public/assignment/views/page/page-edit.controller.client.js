@@ -7,6 +7,7 @@
 
         var vm = this;
         vm.pageId = $routeParams.pid;
+        vm.userId = $routeParams.uid;
         vm.websiteId = $routeParams.wid;
 
             function init() {
@@ -24,7 +25,7 @@
         }
 
         function deletePage (pageId) {
-            PageService.deletePage(vm.pageId);
+            PageService.deletePage(pageId);
         }
     }
 })();

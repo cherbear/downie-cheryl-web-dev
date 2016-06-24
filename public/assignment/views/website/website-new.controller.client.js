@@ -13,7 +13,7 @@
         }
         init();
 
-        function create() {
+        function create(website) {
             vm.website = WebsiteService.createWebsite(vm.userId, website);
         }
     }

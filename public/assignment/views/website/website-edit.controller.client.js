@@ -14,8 +14,8 @@
         }
         init();
 
-        function updateWebsite(website) {
-            var result = WebsiteService.updateWebsite(vm.websiteId, website);
+        function updateWebsite() {
+            var result = WebsiteService.updateWebsite(vm.website._id, vm.website);
             if(result === true) {
                 vm.success = "Website successfully updated";
             } else {
@@ -25,7 +25,7 @@
 
         function deleteWebsite () {
             WebsiteService.deleteWebsite(vm.websiteId);
-            $location.url("/user/:uid/website/");
+            $location.url("/user/" + vm.userId + "/website/");
         }
     }
 })();
