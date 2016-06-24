@@ -8,6 +8,8 @@
         vm.userId = $routeParams.uid;
         vm.websiteId = $routeParams.wid;
 
+        vm.create = create;
+
         function init() {
             vm.website = WebsiteService.findWebsiteById(vm.websiteId);
         }

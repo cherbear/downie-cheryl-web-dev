@@ -10,6 +10,8 @@
         vm.pageId = $routeParams.pid;
         vm.widgetId = $routeParams.wgid;
 
+
+        vm.create = create;
         vm.getTrustedHtml = getTrustedHtml;
         vm.getTrustedUrl = getTrustedUrl;
 
@@ -35,6 +37,6 @@
             var html = $sce.trustAsHtml(widget.text);
             return html;
         }
-        
+
     }
 })();

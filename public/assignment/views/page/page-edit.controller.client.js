@@ -27,9 +27,9 @@
             }
         }
 
-        function deletePage (pageId) {
-            PageService.deletePage(pageId);
-            $location.url("/user/" + vm.userId + "/website/" + vm.websiteId);
+        function deletePage () {
+            PageService.deletePage(vm.pageId);
+            $location.url("/user/" + vm.userId + "/website/" + vm.websiteId + "/page/");
         }
     }
 })();

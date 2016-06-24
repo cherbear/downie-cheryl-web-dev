@@ -16,9 +16,9 @@
             } else if (password != password2) {
                 vm.error = "Passwords did not match";
             } else {
-                newUser = {"_id": new Date().getMilliseconds(), "username": username, "password": password, "firstName": "", "lastName": ""};
-                UserService.createUser(newUser);
-                $location.url("/user/" + newUser._id);
+                vm.newUser = {"_id": (new Date).getTime(), "username": username, "password": password};
+                UserService.createUser(vm.newUser);
+                $location.url("/user/" + vm.newUser._id);
             }
         }
     }

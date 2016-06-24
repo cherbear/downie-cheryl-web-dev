@@ -10,6 +10,9 @@
         vm.websiteId = $routeParams.wid;
         vm.pageId = $routeParams.pid;
 
+        vm.updateWidget = updateWidget;
+        vm.deleteWidget = deleteWidget;
+
         function init() {
             vm.widget = angular.copy(WidgetService.findWidgetById(vm.widgetId));
         }
