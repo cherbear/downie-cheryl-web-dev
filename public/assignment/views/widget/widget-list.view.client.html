@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="navbar-header">
             <p class="navbar-text pull-left">
-                <a href="#/user/{{model.user._id}}/website/{{model.website._id}}/page/{{model.page._id}}" class="navbar-link">
+                <a href="#/user/{{model.userId}}/website/{{model.websiteId}}/page/{{widget.pageId}}" class="navbar-link">
                   <span class="glyphicon glyphicon-chevron-left">
                   </span>
                 </a>
@@ -11,7 +11,7 @@
                 Widgets
             </a>
             <p class="navbar-text pull-right">
-                <a href="#/user/{{model.user._id}}/website/{{model.website._id}}/page/{{model.page._id}}/widget/new" class="navbar-link">
+                <a href="#/user/{{model.userId}}/website/{{model.websiteId}}/page/{{model.pageId}}/widget/new" class="navbar-link">
                   <span class="glyphicon glyphicon-plus">
                   </span>
                 </a>
@@ -24,15 +24,15 @@
 
     {{model.widget}}
 
-    <div ng-repeat="widget in widgets">
+    <div ng-repeat="widget in model.widgets">
         <div ng-switch-when="HEADING">
-            <ng-include src="'widget-heading.view.client.html'"></ng-include>
+            <ng-include src="widget-heading.view.client.html"></ng-include>
         </div>
         <div ng-switch-when="IMAGE">
-            <ng-include src="'image.view.client.html'"></ng-include>
+            <ng-include src="widget-image.view.client.html"></ng-include>
         </div>
         <div ng-switch-when="YOUTUBE">
-            <ng-include src="'widget-youtube.view.client.html'"></ng-include>
+            <ng-include src="widget-youtube.view.client.html"></ng-include>
         </div>
     </div>
 

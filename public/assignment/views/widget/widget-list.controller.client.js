@@ -3,18 +3,20 @@
         .module("WebAppMaker")
         .controller("WidgetListController", WidgetListController);
 
-    function WidgetListController($routeParams, WebsiteService) {
+    function WidgetListController($routeParams, WidgetService) {
         var vm = this;
-        vm.widgetId = $routeParams.widgetId;
-        vm.widgetType = $routeParams.widgetType;
+        vm.userId = $routeParams.uid;
+        vm.websiteId = $routeParams.wid;
+        vm.pageId = $routeParams.pid;
+        vm.widgetId = $routeParams.wgid;
 
         function init() {
-            vm.widget = WidgetService.findWidgetById(vm.widgetId);
+            vm.widgets = WidgetService.findWidgetById(vm.widgetId);
         }
         init();
 
-        function create(widgetType) {
-            vm.widget = WidgetService.createWidget(vm.pageId, vm.widget);
+        function create(widget) {
+            vm.widgets = WidgetService.createWidget(vm.pageId, widget);
         }
     }
 })();
