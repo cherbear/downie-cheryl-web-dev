@@ -15,7 +15,7 @@
         init();
 
         function updateUser() {
-            var result = UserService.updateUser(vm.user._id, vm.user);
+            var result = UserService.updateUser(vm.id, vm.user);
             if(result === true) {
                 vm.success = "User successfully updated";
             } else {

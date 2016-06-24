@@ -3,7 +3,7 @@
         .module("WebAppMaker")
         .controller("PageEditController", PageEditController);
 
-    function PageEditController($routeParams, PageService) {
+    function PageEditController($routeParams, $location, PageService) {
 
         var vm = this;
         vm.pageId = $routeParams.pid;

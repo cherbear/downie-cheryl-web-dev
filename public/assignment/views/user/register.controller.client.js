@@ -9,11 +9,11 @@
 
         vm.register = register;
 
-        function register (username, password, verifyPassword) {
+        function register (username, password, password2) {
             
             if (username === UserService.findUserByUsername(username)) {
                 vm.error = "Username already taken";
-            } else if (password != verifyPassword) {
+            } else if (password != password2) {
                 vm.error = "Passwords did not match";
             } else {
                 newUser = {"_id": new Date().getMilliseconds(), "username": username, "password": password, "firstName": "", "lastName": ""};
