@@ -1,0 +1,20 @@
+Still broken:
+
+
+create problems
+---------------
+
+-Register doesn't add the user to the user array, resulting in the new user being directed back to the login screen
+ should they try to click Websites.
+
+-Website-New adds the new website, but the formatting is off and it's not possible to update it using Website-Edit.
+
+-Page-New adds the new page, but the formatting is off and it's not possible to update it using Page-Edit.
+
+
+widget problems
+---------------
+
+-Widget-List does not show any widgets despite widgets existing in the original array.
+
+-Widget-Edit does not change the view to be the appropriate view for each widget type.
