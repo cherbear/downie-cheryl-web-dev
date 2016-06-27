@@ -1,6 +1,6 @@
 (function(){
     angular
-        .module("WebAppMaker")
+        .module("ServiceMeetUps")
         .config(Config);
 
     function Config($routeProvider) {
