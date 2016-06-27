@@ -5,16 +5,21 @@
 
     function Config($routeProvider) {
         $routeProvider
+            // user views
             .when("/login", {
                 templateUrl: "views/user/login.view.client.html",
                 controller: "LoginController",
                 controllerAs: "model"
             })
-            .when("/", {
-                templateUrl: "views/user/login.view.client.html",
-                controller: "LoginController",
+            .when("/user/:userId", {
+                templateUrl: "views/user/user-profile.view.client.html",
+                controller: "UserProfileController",
                 controllerAs: "model"
             })
+
+            // event views
+
+            
             .otherwise({
                 redirectTo: "/login"
             });
