@@ -1,0 +1,23 @@
+input {
+    margin-bottom: 5px;
+}
+
+
+.btn {
+    border-radius: 18px;
+}
+
+body {
+    padding-top: 120px;
+    padding-bottom: 60px;
+    background: red;
+}
+
+p.navbar-text.pull-right {
+    margin-right: 15px;
+}
+
+p.navbar-text.pull-left {
+    margin-left: 15px;
+
+}
