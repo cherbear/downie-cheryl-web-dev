@@ -21,7 +21,6 @@
                 controller: "UserProfileController",
                 controllerAs: "model"
             })
-
             // event views
 
             
@@ -29,7 +28,7 @@
                 redirectTo: "/login"
             });
 
-        function checkLoggedin(UserService, $q, $location, $rootScope) {
+        /*function checkLoggedin(UserService, $q, $location, $rootScope) {
 
             var deferred = $q.defer();
 
@@ -56,7 +55,7 @@
                 );
 
             return deferred.promise;
-        }
+        }*/
 
     }
 })();
