@@ -1,3 +1,4 @@
-/**
- * Created by a on 6/23/2016.
- */
+module.exports = function(app) {
+
+    var models = require("./models/models.js")();
+};
