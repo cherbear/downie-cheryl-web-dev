@@ -1,10 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+(function(){
+    angular
+        .module("ServiceMeetUps")
+        .controller("UserProfileController", UserProfileController);
 
-</body>
-</html>
+    function UserProfileController($location, $rootScope, UserService) {
+
+        var vm = this;
+
+        vm.func = func;
+
+        function func (params) {
+            /*UserService
+             .login(username, password)
+             .then(
+             function(response) {
+             console.log(response);
+             var user = response.data;
+             if(user) {
+             $rootScope.currentUser = user;
+             var id = user._id;
+             $location.url("/user/" + id);
+             }
+             },
+             function (error) {
+             vm.error = "User not found";
+             }
+             );*/
+        }
+    }
+})();
