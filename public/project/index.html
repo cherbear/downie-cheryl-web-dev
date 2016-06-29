@@ -1,10 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="WebAppMaker">
 <head>
-    <meta charset="UTF-8">
-    <title>Project Home Page</title>
+
+    <!-- Mobile Friendly -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="initial-scale=1.25, user-scalable = no">
+
+    <!-- Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"/>
+
+    <!-- Ajax jquery -->
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css" rel="stylesheet">
+
+
+    <link href="css/project-style.css" rel="stylesheet"/>
+
+
+    <!-- JS scripts here -->
+
+    <!-- Angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/textAngular/1.5.1/textAngular.css" rel="stylesheet"/>
+
+
+    <script src="app.js"></script>
+    <script src="config.js"></script>
+
+    <!-- User controllers -->
+    <script src="views/user/login.controller.client.js"></script>
+    <script src="views/user/user-profile.controller.client.js"></script>
+    <script src="views/user/register.controller.client.js"></script>
+
+    <!-- Event controllers -->
+    <script src="views/event/create-event.controller.client.js"></script>
+    <script src="views/event/edit-event.controller.client.js"></script>
+    <script src="views/event/event-list.controller.client.js"></script>
+    <script src="views/event/event-profile.controller.client.js"></script>
+    <script src="views/event/search-events.controller.client.js"></script>
+
+
 </head>
 <body>
-    <h1>Project Home Page</h1>
+<div ng-view class="container"></div>
 </body>
 </html>
