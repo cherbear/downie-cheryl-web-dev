@@ -4,11 +4,18 @@
         {{model.error}}
     </div>
 
-    <h2>Login</h2>
+    <div class="page-header">
+        <h1>Service Meetups <br><small>Login</small></h1>
+    </div>
+    <div align = "left"><hr></div>
+    <br>
+    <br>
     <form name="myForm" novalidate>
+        Username:
         <input ng-model="username" class="form-control"
-               placeholder="username"
+               placeholder="alice"
                type="text"/>
+        Password:
         <input ng-model="password" class="form-control"
                placeholder="password"
                type="password">

@@ -2,14 +2,39 @@ input {
     margin-bottom: 5px;
 }
 
+.page-header {
+    border-bottom: none;
+}
+
+hr {
+    display: block;
+    position: absolute;
+    padding: 0;
+    margin: 8px auto;
+    height: 0;
+    width: 50%;
+    max-height: 0;
+    font-size: 1px;
+    line-height: 0;
+    clear: both;
+    border: none;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
 
 .btn {
     border-radius: 18px;
+    width: 50%;
+}
+
+.form-control {
+    width: 50%;
 }
 
 body {
     padding-top: 60px;
     padding-bottom: 60px;
+    background-color: #f6f6f6;
 }
 
 p.navbar-text.pull-right {
