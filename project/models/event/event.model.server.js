@@ -3,18 +3,17 @@ module.exports = function() {
     var mongoose = require("mongoose");
     var EventSchema = require("./event.schema.server.js")();
     var Event = mongoose.model("Event", EventSchema);
-/*
+
     var api = {
-        findFacebookUser: findFacebookUser,
-        createUser: createUser,
-        findUserByCredentials: findUserByCredentials,
-        findUserByUsername: findUserByUsername,
-        findUserById: findUserById,
-        updateUser: updateUser,
-        deleteUser: deleteUser
+        createEvent: createEvent,
+        findEventsByUser: findEventsByUser,
+        findEventById: findEventById,
+        updateEvent: updateEvent,
+        deleteEvent: deleteEvent
     };
     return api;
 
+    /*
     function findFacebookUser(id) {
         return User.findOne({'facebook.id': id});
     }

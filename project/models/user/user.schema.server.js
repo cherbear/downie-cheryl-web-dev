@@ -10,9 +10,9 @@ module.exports = function() {
         google: {id: String},
         email: String,
         phone: String,
-        websites: [],
-        dateCreated: {type: Date, default: Date.now},
-    }, {collection: "assignment.user"});
+        registeredEvents: [],
+        dateCreated: {type: Date, default: Date.now}
+    }, {collection: "project.user"});
 
     return UserSchema
 };

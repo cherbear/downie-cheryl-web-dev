@@ -11,7 +11,7 @@ module.exports = function() {
         contactEmail: String,
         contactPhone: String,
         needHelp: Boolean
-    }, {collection: "project.user"});
+    }, {collection: "project.event"});
 
     return EventSchema
 };
