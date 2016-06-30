@@ -10,22 +10,18 @@
         vm.register = register;
 
         function register (username, password) {
-            /*UserService
-                .login(username, password)
+            UserService
+                .register(username, password)
                 .then(
-                    function(response) {
-                        console.log(response);
+                    function(response){
                         var user = response.data;
-                        if(user) {
-                            $rootScope.currentUser = user;
-                            var id = user._id;
-                            $location.url("/user/" + id);
-                        }
+                        $rootScope.currentUser = user;
+                        $location.url("/user/" + user._id);
                     },
-                    function (error) {
-                        vm.error = "User not found";
+                    function(error){
+                        vm.error = error.data;
                     }
-                );*/
+                );
         }
     }
 })();
