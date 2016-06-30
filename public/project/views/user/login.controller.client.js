@@ -10,23 +10,6 @@
         vm.login = login;
 
         function login (username, password) {
-            if (username === "administrator") {
-                UserService
-                    .login(username, password)
-                    .then(
-                        function(response) {
-                            console.log(response);
-                            var user = response.data;
-                            if(user) {
-                                $rootScope.currentUser = user;
-                                $location.url("/admin/");
-                            }
-                        },
-                        function (error) {
-                            vm.error = "User not found";
-                        }
-                    );
-            }
             UserService
                 .login(username, password)
                 .then(

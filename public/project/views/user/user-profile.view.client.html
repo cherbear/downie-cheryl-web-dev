@@ -1,18 +1,6 @@
-<nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="">
-                Profile
-            </a>
-            <p class="navbar-text pull-right">
-                <a ng-click="model.updateUser()" class="navbar-link">
-                  <span class="glyphicon glyphicon-ok">
-                  </span>
-                </a>
-            </p>
-        </div>
-    </div>
-</nav>
+<div class="page-header">
+    <h1>Service Meetups <br><small>Profile</small></h1>
+</div>
 
 <div class="container">
 
@@ -59,6 +47,8 @@
         </div>
     </form>
 
+    <a class="btn btn-success btn-block"
+       ng-click="model.updateUser()">Update Profile</a>
     <a class="btn btn-primary btn-block"
        href="#/user/{{model.user._id}}/registeredEvents">Your Registered Events</a>
     <a ng-click="model.logout()" class="btn btn-danger btn-block">Logout</a>

@@ -7,9 +7,9 @@
     <h2>Register</h2>
 
     <form name="myForm" novalidate>
-        <input name="username" ng-model="username" class="form-control" placeholder="yourUsername" type="text"/>
-        <input name="password" type="password" ng-model="password" class="form-control"/>
-        <input name="password2" type="password" ng-model="password" class="form-control"/>
+        <input name="username" ng-model="username" class="form-control" placeholder="username" type="text"/>
+        <input name="password" type="password" ng-model="password" placeholder="password" class="form-control"/>
+        <input name="password2" type="password" ng-model="password" placeholder="verify password" class="form-control"/>
         <span ng-show="myForm.$submitted && username.$invalid || password.$invalid || password2.$invalid">
                     Required field
                 </span>

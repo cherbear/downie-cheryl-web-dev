@@ -4,12 +4,17 @@
         {{model.error}}
     </div>
 
-    <h2>Register</h2>
+    <div class="page-header">
+        <h1>Service Meetups <br><small>Register</small></h1>
+    </div>
 
     <form name="myForm" novalidate>
-        <input name="username" ng-model="username" class="form-control" placeholder="yourUsername" type="text"/>
+        Username:
+        <input name="username" ng-model="username" class="form-control" placeholder="bob" type="text"/>
+        Password:
         <input name="password" type="password" ng-model="password" class="form-control"/>
-        <input name="password2" type="password" ng-model="password" class="form-control"/>
+        Verify Password:
+        <input name="password2" type="password" ng-model="password2" class="form-control"/>
         <span ng-show="myForm.$submitted && username.$invalid || password.$invalid || password2.$invalid">
                     Required field
         </span>
