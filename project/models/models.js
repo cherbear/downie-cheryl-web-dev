@@ -17,12 +17,12 @@ module.exports = function() {
 
 
     var userModel = require("./user/user.model.server.js")();
-    var eventModel = require("./event/event.model.server.js")();
+    //var eventModel = require("./event/event.model.server.js")();
 
 
     var models = {
-        userModel: userModel,
-        eventModel: eventModel
+        userModel: userModel
+        //eventModel: eventModel
     };
 
     return models;
