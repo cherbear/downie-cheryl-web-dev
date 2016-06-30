@@ -21,14 +21,43 @@
                 controller: "UserProfileController",
                 controllerAs: "model"
             })
+            // administrator views
+            .when("/admin/", {
+                templateUrl: "views/administrator/admin-profile.view.client.html",
+                controller: "AdminProfileController",
+                controllerAs: "model"
+            })
             // event views
-
-            
+            .when("/user/:userId/registeredEvents", {
+                templateUrl: "views/event/event-list.view.client.html",
+                controller: "EventListController",
+                controllerAs: "model"
+            })
+            .when("/user/:userId/events", {
+                templateUrl: "views/event/search-events.view.client.html",
+                controller: "SearchEventsController",
+                controllerAs: "model"
+            })
+            .when("/user/:userId/events/create", {
+                templateUrl: "views/event/create-event.view.client.html",
+                controller: "CreateEventController",
+                controllerAs: "model"
+            })
+            .when("/user/:userId/events/:eventId", {
+                templateUrl: "views/event/event-profile.view.client.html",
+                controller: "EventProfileController",
+                controllerAs: "model"
+            })
+            .when("/user/:userId/events/:eventId/edit", {
+                templateUrl: "views/event/edit-event.view.client.html",
+                controller: "EditEventController",
+                controllerAs: "model"
+            })
             .otherwise({
                 redirectTo: "/login"
             });
 
-        /*function checkLoggedin(UserService, $q, $location, $rootScope) {
+        function checkLoggedin(UserService, $q, $location, $rootScope) {
 
             var deferred = $q.defer();
 
@@ -55,7 +84,7 @@
                 );
 
             return deferred.promise;
-        }*/
+        }
 
     }
 })();
